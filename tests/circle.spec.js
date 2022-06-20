@@ -40,7 +40,6 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
         area: 28.259999999999998,
         circumference: 18.84,
         radius: 3,
-      })
-    ;
+      });
   });
 });
