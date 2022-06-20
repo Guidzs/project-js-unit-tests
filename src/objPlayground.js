@@ -50,15 +50,15 @@ const arrayGenerator = (type, object) => {
   if (type === 'values') {
     return Object.values(object);
   }
-  if (type === 'entries') {
-    let array = [];
-    
-    for (let i in object) {
-      array.push(Object.keys(object), Object.values(object)) 
-    }
-    return array;
-  }
-  
 };
-console.log(arrayGenerator('entries', {0: 1, 2: 3,}))
+  // if (type === 'entries') {
+  //   let array = [];
+    
+  //   for (let i in object) {
+  //     array.push(Object.keys(object), Object.values(object)) 
+  //   }
+  //   return array;
+  // }
+
+// console.log(arrayGenerator('entries', {0: 1, 2: 3,}))
 module.exports = { calculator, arrayGenerator };
