@@ -41,6 +41,7 @@ const calculator = (number1, number2) => {
     div: Math.floor(number1 / number2),
     sub: number1 - number2,
   };
+  return operation;
 };
 
 const arrayGenerator = (type, object) => {
@@ -50,15 +51,15 @@ const arrayGenerator = (type, object) => {
   if (type === 'values') {
     return Object.values(object);
   }
-};
-  // if (type === 'entries') {
-  //   let array = [];
-    
-  //   for (let i in object) {
-  //     array.push(Object.keys(object), Object.values(object)) 
-  //   }
-  //   return array;
-  // }
-
+  if (type === 'entries') {
+    let array = [];
+    let keys = Object.keys(object);
+    let values = Object.values(object);
+    for (let i = 0; i < keys.length; i += 1) {
+      array.push([keys[i], values[i]]);
+    }
+    return array;
+  }
+};  
 // console.log(arrayGenerator('entries', {0: 1, 2: 3,}))
 module.exports = { calculator, arrayGenerator };
